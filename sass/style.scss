@@ -1,0 +1,23 @@
+@import './libs/_variables';
+@import './libs/_mixins';
+@import './libs/_placeholders';
+
+@import './libs/_animations';
+@import './libs/_mobilefirst';
+
+
+//main
+body { 
+    background: $white;
+    width:100%;
+    height: 100%;
+    max-width: 480px;
+    font-family: $default;
+    color: $black;
+        @extend %center;
+}
+
+a {
+ text-decoration:none; 
+ color: $black;
+} 
