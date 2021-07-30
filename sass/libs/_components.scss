@@ -1,0 +1,33 @@
+.bouton {
+    @extend %center;
+    &__explore {
+        @include bouton; 
+        box-shadow: $shadow;
+        border: hidden;
+        background: linear-gradient($secondary, $primary);
+        color: $white;
+        margin: $pad;
+        }
+    &__nav {
+        @include bouton;
+        color: $black;
+        background-color: $lighter;
+        @extend %center;
+        width: 450px;
+        height: 50px;
+        z-index: -1;
+        margin-left: 5px;;
+    }
+}
+.fa-stack {
+    bottom: -46px;
+    font-style: normal;
+    z-index: 0;
+    .fa-stack-1x {
+    color: $white;
+    }
+    .fa-circle {
+    color: $primary;
+    }
+}
+

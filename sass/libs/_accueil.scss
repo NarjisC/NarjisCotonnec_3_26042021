@@ -1,0 +1,32 @@
+
+.introduction {
+    @extend %column;
+    &__search-box {
+        background-color: $grey;
+        color: $darker;
+        box-shadow: 1px 1px 5px $dark inset;
+        justify-content: space-envenly;
+        column-gap: $pad;
+        font-weight: $b;
+        @extend %center;
+    }
+    &__present {
+        background-color: $lighter;
+        @extend %center;
+    }
+}
+
+nav i {
+    color: $dark;
+    padding-right: $pad;
+}
+nav i:hover {
+    color: $primary;
+}
+nav a:hover {
+    background-color: lighten($secondary, 20%);
+}
+
+
+
+

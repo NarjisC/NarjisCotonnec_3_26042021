@@ -1,0 +1,32 @@
+//colors
+$primary: #9356DC;
+$secondary: #ff79da;
+$third: #99E2D0;
+
+$grey: #c0c0c0;
+$lighter: lighten($grey,20%);
+$dark: darken($grey,20%);
+$darker: darken($grey,60%);
+$white: #fff;
+$black: #000;
+
+//fonts
+$title: 'Shrikhand';
+$default: 'Roboto' !default;
+$b: bolder;
+
+//numbers
+$txsize: px;
+$txtitle: 42px;
+$rad: 30px;
+$pad: 20px;
+
+//images 
+$shadow: 5px 5px 5px $dark;
+$assetPath: '..\images\restaurants';
+$list: palette note française délice;
+
+//responsive
+$mobwidth: 480px;
+
+

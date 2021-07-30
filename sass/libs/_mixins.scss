@@ -1,0 +1,21 @@
+@mixin animation {
+    @for $i from 1 through 8 {
+      &.lettre:nth-child(#{$i}) {
+        animation-delay: (#{$i+.1}s);
+    }
+  }
+}
+
+@mixin bouton {
+  padding: $pad;
+  font-size: $txsize;
+  font-weight: $b;
+  border-radius: $rad;
+}
+
+/*@mixin bgd-img($assetPath) {
+  background-image: url($assetPath);
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: visible;
+}*/

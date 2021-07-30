@@ -1,0 +1,41 @@
+.primary-content {
+    background-color: $lighter;
+    article {
+        background-color: $white;
+        width: 450px;
+        height: 350px;
+        box-shadow: $shadow;
+        border-radius: $rad;
+        overflow: hidden;
+        margin: 0;
+        position: relative;
+    }
+    img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        overflow: visible;
+        margin: auto;
+        border-radius: $rad $rad 0 0;
+        padding: 0;
+    }
+    &__new {
+        background-color: $third;
+        color: darken($third, 30%);
+        padding: 3px;
+        text-align: right;
+        position: absolute;
+        font-weight: $b;
+        top: 30px;
+        right: 30px;
+        border-radius: 3px;
+    }
+    &__info {
+        padding: $pad;
+    }
+    i {
+        position: absolute;
+        right: 30px;
+        bottom: 30px;
+    }
+}
