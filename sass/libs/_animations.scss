@@ -1,5 +1,4 @@
-/*loader*/
-/*.loader {
+.loader {
     position: absolute;
     background-color: $lighter;
     margin: auto;
@@ -11,7 +10,7 @@
 }
 
 #hidden {
-    animation: hidden 9s ease-out forwards;
+    animation: hidden 3s ease-out forwards;
 }
 
 @keyframes hidden {
@@ -23,11 +22,12 @@
   .lettre {
     opacity: 0;
     font-family: $title;
+    color: $lighter;
     font-size: 50px;
     letter-spacing: 5px;
     margin-bottom: 200px;
     animation-fill-mode: forwards;
-    animation: flash 0.8s 2 ease-out;
+    animation: flash 2s 2 ease-out;
       @include animation;
   }
   
@@ -35,12 +35,12 @@
     0% {
       color: $secondary;
       text-shadow: 0 0 7px $secondary;
-      opacity: 0.7;
+      opacity: $op;
     }
     50% {
       color: $third;
       text-shadow: none;
-      opacity: 0.7;
+      opacity: $op;
     }
     100% {
       color: $secondary;
@@ -56,7 +56,7 @@
     border-radius: 50%;
     width: 50px;
     height: 50px;
-    animation: spin 0.8s linear 10;
+    animation: spin 2s linear 2;
     animation-fill-mode: forwards;
       @extend %center;
 }
@@ -64,8 +64,8 @@
 @keyframes spin {
     0% { 
         transform: rotate(0deg);
-        opacity: 0.7; }
+        opacity: $op; }
     100% { 
         transform: rotate(360deg);
         opacity: 0; }
-}*/
+}

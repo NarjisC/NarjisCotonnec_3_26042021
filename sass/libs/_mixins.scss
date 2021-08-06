@@ -1,7 +1,7 @@
 @mixin animation {
     @for $i from 1 through 8 {
       &.lettre:nth-child(#{$i}) {
-        animation-delay: (#{$i+.1}s);
+        animation-delay: (#{$i*.1}s);
     }
   }
 }
@@ -13,9 +13,17 @@
   border-radius: $rad;
 }
 
-/*@mixin bgd-img($assetPath) {
+@mixin media($keys...){
+  @each $key in $keys { 
+    @media (min-width: map-get($breakpoints, $key)){
+      @content
+    } 
+  }
+}
+
+@mixin bgd-img($assetPath) {
   background-image: url($assetPath);
   background-size: cover;
   background-repeat: no-repeat;
   overflow: visible;
-}*/
+}

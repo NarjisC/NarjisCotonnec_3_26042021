@@ -19,9 +19,12 @@ footer {
         a {
             color: $white;
         }
+        a:hover {
+            color: $primary;
+        }
         h2 { 
-    font-family: $title;
-    padding-left: $pad;
+        font-family: $title;
+        padding-left: $pad;
         }
         ul li {
             margin: 0;

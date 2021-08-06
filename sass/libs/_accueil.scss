@@ -2,13 +2,25 @@
 .introduction {
     @extend %column;
     &__search-box {
+        @extend %center;
         background-color: $grey;
         color: $darker;
-        box-shadow: 1px 1px 5px $dark inset;
+        box-shadow: inset  0px 10px 10px -10px $darker;
         justify-content: space-envenly;
         column-gap: $pad;
         font-weight: $b;
         @extend %center;
+        width: auto;
+        height: 50px;
+    }
+    i {padding-left: 30px;}
+    input {
+        font-family: $default;
+        font-size: $txsize;
+        font-weight: $b;
+        background-color: $grey;
+        outline: none;
+        border: none;
     }
     &__present {
         background-color: $lighter;
@@ -16,16 +28,7 @@
     }
 }
 
-nav i {
-    color: $dark;
-    padding-right: $pad;
-}
-nav i:hover {
-    color: $primary;
-}
-nav a:hover {
-    background-color: lighten($secondary, 20%);
-}
+
 
 
 

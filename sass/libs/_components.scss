@@ -2,32 +2,54 @@
     @extend %center;
     &__explore {
         @include bouton; 
+        border: none;
         box-shadow: $shadow;
         border: hidden;
         background: linear-gradient($secondary, $primary);
         color: $white;
         margin: $pad;
+        &:hover{opacity: $op;}
         }
-    &__nav {
-        @include bouton;
-        color: $black;
-        background-color: $lighter;
-        @extend %center;
-        width: 450px;
-        height: 50px;
-        z-index: -1;
-        margin-left: 5px;;
+        &__nav {
+            @extend %center;
+            @include bouton;
+            color: $black;
+            background-color: $lighter;
+            width: 400px;
+            height: 60px;
+            z-index: 0;
+            &:hover{opacity: $op;}
+        }
+    &__round {
+        clip-path: circle(40% at 50% 50%);
+        padding: 8px;
+        background: $primary;
+        color: $white;
+        font-weight: $b;
+        border: none;
+        position: relative;
+        bottom: -40px;
+        left: -8px;
+        z-index: 2;
     }
 }
-.fa-stack {
-    bottom: -46px;
-    font-style: normal;
-    z-index: 0;
-    .fa-stack-1x {
-    color: $white;
-    }
-    .fa-circle {
-    color: $primary;
-    }
+
+nav i  {
+    color: $dark;
+    padding-left: 95px;
+    padding-right: $pad;
+    padding-top: $pad;
+    position: absolute;
+    z-index: 3;
+    &:hover {color: $primary;}
 }
+
+.primary-content .heart {
+        position: absolute;
+        right: 30px;
+        bottom: 30px;
+        width: 32px;
+        height: 32px;
+    }
+    
 

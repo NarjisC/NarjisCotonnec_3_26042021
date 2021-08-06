@@ -2,17 +2,17 @@
     background-color: $lighter;
     article {
         background-color: $white;
-        width: 450px;
-        height: 350px;
+        width: 400px;
+        height: 300px;
         box-shadow: $shadow;
         border-radius: $rad;
         overflow: hidden;
-        margin: 0;
+        margin: 30px;
         position: relative;
     }
     img {
         width: 100%;
-        height: 250px;
+        height: 200px;
         object-fit: cover;
         overflow: visible;
         margin: auto;
@@ -22,7 +22,7 @@
     &__new {
         background-color: $third;
         color: darken($third, 30%);
-        padding: 3px;
+        padding: 10px;
         text-align: right;
         position: absolute;
         font-weight: $b;
@@ -31,11 +31,8 @@
         border-radius: 3px;
     }
     &__info {
-        padding: $pad;
-    }
-    i {
-        position: absolute;
-        right: 30px;
-        bottom: 30px;
+        padding: $pad 0 $pad $pad;
+        line-height: 0;
+        margin-top: 0;
     }
 }
