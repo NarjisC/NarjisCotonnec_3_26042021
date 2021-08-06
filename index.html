@@ -10,9 +10,10 @@
             <link rel="preconnect" href="https://fonts.gstatic.com"> 
             <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;900&display=swap" rel="stylesheet"> 
             <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
-            <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="./font/font-awesome-4.7.0/css/font-awesome.min.css">
+            <link rel="icon" href="favicon.ico" type="image/x-icon">
             <script src="https://kit.fontawesome.com/bcad5a07b6.js" crossorigin="anonymous"></script>
-            <link rel="icon" type="image/png" sizes="16x16" href=".\Maquettes Ohmyfood\images\logo/ohmyfood@2x.svg">
+            <link rel="icon" type="image/png" sizes="16x16" href=".\images\logo/ohmyfood@2x.svg">
             <title>Ohmyfood</title>
         </head>
 
@@ -32,7 +33,7 @@
                 <div class="spinner"></div>
             </div>
             
-            <!-- Header -->
+        
             <header>
                 <a href="#" class="welcome">
                     <img src="./images\logo\ohmyfood@2x.svg" alt="logo Ohmyfood"/>
@@ -41,43 +42,35 @@
 
             <section class="introduction">
                     <div class="introduction__search-box">
-                            <i class="fa fa-map-marker"></i>
-                            <p>Paris, Belleville</p>
-                    </div>
-                
+                        <i class="fa fa-map-marker"></i>
+                            <input class="search-txt" type="text" name="search" placeholder="Ville, Quartier"/>      
+                    </div>   
                 
                 <div class="introduction__present">
                     <h1>Réservez le menu qui vous convient</h1>
                         <p>Découvrez des restaurants d'exeption, selectionnés par nos soins</p>
                     <button class="bouton__explore">Explorer nos restaurants</button>
                 </div>
-            </section>
-
+            </section> 
+            
             <nav>
                     <h3>Fonctionnement</h3>
 
-                        
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-lg"></i>
-                                <i class="fa-stack-1x">1</i>
-                            </span>
-                                <a class="bouton__nav" href="#">
-                                    <i class="fa fa-mobile"></i>
-                                        Choisissez un restaurant</a>
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-lg"></i>
-                                <i class="fa-stack-1x">2</i>
-                            </span>
-                                <a class="bouton__nav" href="#">
-                                    <i class="fa fa-list"></i>
-                                        Composez votre menu</a>
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-lg"></i>
-                                <i class="fa-stack-1x">3</i>
-                            </span>
-                                <a class="bouton__nav" href="#">
-                                    <i class="fas fa-store"></i>
-                                        Dégustez au restaurant</a>
+                        <ul class="fa-ul">
+                
+                            <span class="bouton__round">1</span>
+                                <li class="bouton__nav">
+                                    <i class="fa-li fa fa-mobile" aria-hidden="true"></i>
+                                        Choisissez un restaurant</li>
+                            <span class="bouton__round">2</span>
+                                <li class="bouton__nav">
+                                    <i class="fa-li fa fa-list" aria-hidden="true"></i>
+                                        Composez votre menu</li>
+                            <span class="bouton__round">3</span>
+                                <li class="bouton__nav">
+                                    <i class="fa-li fas fa-store" aria-hidden="true"></i>
+                                        Dégustez au restaurant</li>
+                        </ul>
             </nav>
 
                 <div class="primary-content">
@@ -92,8 +85,9 @@
                                             <div class="primary-content__info">
                                                 <h4>La Palette Du Goût</h4>
                                                 <p>Ménilmontant</p>
+                                                <img src="./images\logo\heartoutlinedshape_81110.ico" 
+                                                alt="icon heart" class="heart"/>
                                             </div>
-                                                <i class="fa fa-heart-o fa-2x"></i>
                                 </figure>
                             </a>
                         </article>
