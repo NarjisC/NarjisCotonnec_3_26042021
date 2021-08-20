@@ -3,7 +3,7 @@
 @import './libs/mixins';
 @import './libs/mediaqueries';
 
-/*@import './libs/animations';*/
+@import './libs/animations';
 @import './libs/headerfooter';
 @import './libs/accueil';
 @import './libs/components';
@@ -27,7 +27,7 @@ body {
     font-size: $txsize;
 }
 h1 p {
-    justify-content: center;
+    text-align: center;
 }
 h3 {
     padding-left: $pad; 
