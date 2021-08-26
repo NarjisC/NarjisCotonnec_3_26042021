@@ -43,14 +43,4 @@
     }
 }
 
-.heart {
-    transition: all 0.3s linear 0s;
-    background-color: #33BEE5;
-    width: 100%;
-    height: 0;
-    position: absolute;
-}
- 
-.jauge:hover .jauge-remplissage {
-    height: 100%;
-}
+
