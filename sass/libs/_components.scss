@@ -46,26 +46,3 @@ nav i  {
     &:hover {color: $primary;}
 }
 
-.primary-content i {
-    left: 300px;
-    bottom: 120px;
-    background: transparent;
-    }
-.jauge {
-    display: block;
-    z-index: 1;
-    position: absolute;
-}
-.jauge-remplissage {
-    transition: all 0.3s linear 0s;
-    background: linear-gradient($secondary, $primary);
-    width: 100%;
-    height: 0;
-    position: absolute;
-    z-index: 0;
-    pointer-events: none;
-}
-.jauge:active .jauge-remplissage {
-    height: 100%;
-}
-

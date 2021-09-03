@@ -1,15 +1,14 @@
 body {
-        width: 100%;
-        @include media('tablet','desktop') {
-            display: grid;
-            row-gap: 10px;
-            column-gap: 10px;
-            grid-template-areas: 'header section section'
-                        'nav introduction introduction'
-                        '. primary-content primary-content '
-                        'footer footer footer ';
-                        grid-auto-rows: 1fr auto auto 2fr;
-                        grid-template-columns: 2fr auto auto;    
+    width: 100%;
+    @include media('tablet','desktop') {
+        display: grid;
+        column-gap: 10px;
+        grid-template-areas: 'header section section'
+                    'nav introduction introduction'
+                    '. primary-content primary-content '
+                    'footer footer footer ';
+                    grid-auto-rows: 1fr auto auto 2fr;
+                    grid-template-columns: 2fr auto auto; 
         header { 
             margin-left: $pad;
             width: 196px;
@@ -68,4 +67,39 @@ body {
     }
 }
 
-
+/*body {
+        width: 100%;
+        @include media('tablet','desktop') {
+            display: grid;
+            column-gap: 10px;
+            grid-template-areas: 'header . .'
+                        'img title title'
+                        'menu menu menu'
+                        'footer footer footer ';
+                        grid-auto-rows: 1fr 2fr auto 1fr;
+                        grid-template-columns: repeat(3, auto); 
+        .pages {
+            grid-area: 'header';
+            display: inline-flex;
+            flex-wrap: nowrap;
+        }   
+        main img {
+            grid-area: 'img';
+            grid-column: 1;
+            grid-row: 2;
+        }
+        .title {
+            grid-area: 'title';
+            grid-column: 2;
+            grid-row: 2;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            }   
+        .container {display: flex;
+            flex-wrap: nowrap;
+            
+            grid-area: 'menu';
+        }         
+        }
+    }*/

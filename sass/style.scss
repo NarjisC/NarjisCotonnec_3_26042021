@@ -8,8 +8,8 @@
 @import './libs/accueil';
 @import './libs/components';
 @import './libs/primary-content';
-@import './libs/pages';
-
+@import './libs/titlemenu';
+@import './libs/setmenu';
 
 
 
@@ -47,4 +47,8 @@ ul li {
     margin: 0;
     padding: 5px;
     font-weight: $b;
+}
+u {
+    text-decoration: $third 2px solid underline;
+    text-underline-offset: 8px;
 }
