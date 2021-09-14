@@ -5,8 +5,8 @@ body {
         column-gap: 10px;
         grid-template-areas: 'header section section'
                     'nav introduction introduction'
-                    '. primary-content primary-content '
-                    'footer footer footer ';
+                    '. primary-content primary-content'
+                    'footer footer footer';
                     grid-auto-rows: 1fr auto auto 2fr;
                     grid-template-columns: 2fr auto auto; 
         header { 
@@ -67,39 +67,67 @@ body {
     }
 }
 
-/*body {
+body {
         width: 100%;
         @include media('tablet','desktop') {
             display: grid;
             column-gap: 10px;
-            grid-template-areas: 'header . .'
-                        'img title title'
+            grid-template-areas: 'arrow . .'
+                        'img restaurant restaurant'
                         'menu menu menu'
-                        'footer footer footer ';
-                        grid-auto-rows: 1fr 2fr auto 1fr;
-                        grid-template-columns: repeat(3, auto); 
+                        'footer footer footer';
+                        grid-auto-rows: 1fr auto auto 2fr;
+                        grid-template-columns: 2fr auto auto;  
         .pages {
-            grid-area: 'header';
+            grid-area: 'arrow';
             display: inline-flex;
+            justify-content: space-between;
             flex-wrap: nowrap;
-        }   
-        main img {
-            grid-area: 'img';
             grid-column: 1;
-            grid-row: 2;
-        }
-        .title {
-            grid-area: 'title';
-            grid-column: 2;
-            grid-row: 2;
-            display: flex;
-            flex-direction: column;
-            flex-wrap: wrap;
-            }   
-        .container {display: flex;
+            grid-row: 1;
+        }   
+        main {
+            display: inline-flex;
+            flex-direction: row;
             flex-wrap: nowrap;
-            
-            grid-area: 'menu';
-        }         
+            grid-row: 2;
+            width: 100%;
+            img {
+                grid-area: 'img';
+                grid-row: 2;
+                grid-column: 1;
+                width: 500px;
+                height: 300px;
+            }
+            .title {
+                grid-area: 'restaurant';
+                grid-row: 2;
+                grid-column: 3;
+                background: $white;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                flex-wrap: nowrap;
+                position: relative;
+                height: 300px;
+            }
         }
-    }*/
+        .container {
+            grid-area: 'menu';
+            grid-row: 3;
+            grid-column: auto;
+            columns: 3 350px;
+            width: auto;
+            height: 500px;
+            display: inline-block;
+            flex-direction: row;
+            flex-wrap: wrap;
+            .content {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                max-width: 1200px;
+            }
+        }
+    }
+}

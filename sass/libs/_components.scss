@@ -1,20 +1,20 @@
 .bouton {
-    @extend %center;
+        @extend %center;
     &__explore {
-        @include bouton; 
+            @include bouton; 
         border: none;
         box-shadow: $shadow;
         border: hidden;
         background: linear-gradient($secondary, $primary);
         color: $white;
         margin: $pad;
-            &:hover{
+            &:hover {
                 opacity: $op;
                 box-shadow: $bigshadow;}
             }
      &__nav {
-        @extend %center;
-        @include bouton;
+            @extend %center;
+            @include bouton;
         color: $black;
         background-color: $lighter;
         width: 400px;
@@ -45,4 +45,6 @@ nav i  {
     z-index: 3;
     &:hover {color: $primary;}
 }
+
+
 
