@@ -1,33 +1,79 @@
 .bouton {
     @extend %center;
-    &__explore {
+&__explore {
         @include bouton; 
-        box-shadow: $shadow;
-        border: hidden;
-        background: linear-gradient($secondary, $primary);
-        color: $white;
-        margin: $pad;
-        }
-    &__nav {
-        @include bouton;
-        color: $black;
-        background-color: $lighter;
-        @extend %center;
-        width: 450px;
-        height: 50px;
-        z-index: -1;
-        margin-left: 5px;;
-    }
-}
-.fa-stack {
-    bottom: -46px;
-    font-style: normal;
-    z-index: 0;
-    .fa-stack-1x {
+    border: none;
+    box-shadow: $shadow;
+    border: hidden;
+    background: linear-gradient($secondary, $primary);
     color: $white;
+    margin: $pad;
+        &:hover {
+            opacity: $op;
+            box-shadow: $bigshadow;}
+        }
+ &__nav {
+        @extend %center;
+        @include bouton;
+    color: $black;
+    background-color: $lighter;
+    width: 400px;
+    height: 60px;
+    z-index: 0;
+        &:hover{opacity: $op;}
     }
-    .fa-circle {
-    color: $primary;
+&__round {
+    clip-path: circle(40% at 50% 50%);
+    padding: 8px;
+    background: $primary;
+    color: $white;
+    font-weight: $b;
+    border: none;
+    position: relative;
+    bottom: -40px;
+    left: -8px;
+    z-index: 2;
+}
+}
+
+nav i  {
+color: $dark;
+padding-left: 95px;
+padding-right: $pad;
+padding-top: $pad;
+position: absolute;
+z-index: 3;
+&:hover {color: $primary;}
+}
+
+.heart {
+    &__checked {
+        position: absolute;
+        overflow: hidden;
+        color: $primary;
+    }
+    &__checked:hover {
+        visibility: visible;
+        transition: all 1s linear;
+        animation: slidein 2s 0s linear ease-in-out;
+    }
+    &__unchecked {
+        position: relative;
+        visibility: visible;
+    }
+    &__unchecked:hover {
+        overflow: hidden;
     }
 }
 
+@keyframes slidein {
+    from {
+      margin-bottom: 0%;
+      width: 0%;
+    }
+  
+    to {
+      margin-bottom: 100%;
+      width: 100%;
+    }
+  }

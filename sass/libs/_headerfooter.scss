@@ -19,13 +19,11 @@ footer {
         a {
             color: $white;
         }
-        h2 { 
-    font-family: $title;
-    padding-left: $pad;
+        a:hover {
+            color: $primary;
         }
-        ul li {
-            margin: 0;
-            padding: 5px;
-            font-weight: $b;
+        h2 { 
+        font-family: $title;
+        padding-left: $pad;
         }
 }
