@@ -1,22 +1,33 @@
 @mixin animation {
-  @for $i from 1 through 8 {
-    &.lettre:nth-child(#{$i}) {
-      animation-delay: (#{$i*.1}s);
+    @for $i from 1 through 8 {
+      &.lettre:nth-child(#{$i}) {
+        animation-delay: (#{$i*.1}s);
+    }
   }
-}
 }
 
 @mixin bouton {
-padding: $pad;
-font-size: $txsize;
-font-weight: $b;
-border-radius: $rad;
+  padding: $pad;
+  font-size: $txsize;
+  font-weight: $b;
+  border-radius: $rad;
 }
 
 @mixin media($keys...){
-@each $key in $keys { 
-  @media (min-width: map-get($breakpoints, $key)){
-    @content
-  } 
+  @each $key in $keys { 
+    @media (min-width: map-get($breakpoints, $key)){
+      @content
+    } 
+  }
 }
+
+@mixin bgd-img($assetPath) {
+  background-image: url(#{$assetPath});
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@mixin logo {
+  background-image: url(#{$logo-img});
+  width: 100%;
 }
