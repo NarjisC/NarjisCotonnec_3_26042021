@@ -25,6 +25,12 @@ $op : 0.7;
 //images 
 $shadow: 5px 5px 5px $dark;
 $bigshadow: 10px 10px 5px $darker;
+$assetPath:"..\images\restaurants/";
+$logo-img: '#{$assetPath}logo_ohmyfood.svg';
+$palette: '#{$assetPath}restaurant_palette.jpg';
+$note: '#{$assetPath}restaurant_note.jpg';
+$française: '#{$assetPath}restaurant_française.jpg';
+$délice: '#{$assetPath}restaurant_délice.jpg';
 
 //responsive
 $breakpoints: (phone: 480px, tablet: 768px, desktop: 1024px);

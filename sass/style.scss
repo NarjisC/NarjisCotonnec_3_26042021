@@ -2,6 +2,7 @@
 @import './libs/placeholders';
 @import './libs/mixins';
 @import './libs/mediaqueries';
+@import './libs/images';
 
 @import './libs/animations';
 @import './libs/headerfooter';
@@ -12,12 +13,11 @@
 @import './libs/setmenu';
 
 
-
-
 //main
 * {
     box-sizing: border-box;
 }
+
 body { 
     background: $white;
     width: 100%;
@@ -27,13 +27,16 @@ body {
     color: $black;
     font-size: $txsize;
 }
+
 h1 {
     text-align: center;
 }
+
 h3 {
     padding-left: $pad; 
     padding-top: $pad;
 }
+
 h4 {
     line-height: 0;
 }
@@ -48,6 +51,7 @@ ul li {
     padding: 5px;
     font-weight: $b;
 }
+
 u {
     text-decoration: $third 2px solid underline;
     text-underline-offset: 8px;

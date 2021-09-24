@@ -1,74 +1,80 @@
+//pages menus setmenu et animations
+
 .container {
-    @extend %column;
+    @extend %center;
     flex-wrap: wrap;
     justify-content: center;
 }
-.content {background-color: $lighter;
-&__setmenu { 
-        @extend %article;
-        border-radius: 10px;
-    height: 100px;
-    background: $third;  
-    cursor: grab;
-    display: flex;
-    position: relative;
-    flex-wrap: wrap;
-    z-index: 0;
-}
 
-&__uppercase {
-    text-transform: uppercase;
-    font-weight: lighter;
-}
-&__price {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding-right: $pad;
-}
-&__wrapper {
-    width: 400px;
-    height: 100px;
-    border-radius: 10px;
-    background: $white; 
-    transition: all 1s linear;
-    padding-left: 20px;
-}
-&__wrapper:hover {
-    border-radius: 10px 0 0 10px;
-    width: 300px;
-}
-p:first-child {
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-}
-i {
-    overflow: hidden;
-    opacity: 0;
-    width: 0;
-    height: 0;
-    color: $white;
-    margin: 0;
-    padding: 0;
-    bottom: 0;      
-    place-content: center;
+.content {
+    background-color: $lighter;
+    &__setmenu { 
+            @extend %article;
+        border-radius: 10px;
+        height: 100px;
+        background: $third;  
+        cursor: grab;
+        display: flex;
+        position: relative;
+        flex-wrap: wrap;
+        z-index: 0;
+        animation: apparition 2s ease-in-out;
     }
-&__wrapper:hover i {
-    z-index: -1;
-    opacity: 1;
-    display: flex;
-    flex-wrap: wrap;
-    position: absolute;
-    border-radius: 0 $rad $rad 0;
-    width: 100px;
-    height: 100px;
-    left: 100%;
-    margin-left: -100px;
-    animation: 1s 0s ease 2 alternate roll;
-    -webkit-animation: 1s 0s ease 2 alternate roll;
+
+    &__uppercase {
+        text-transform: uppercase;
+        font-weight: lighter;
     }
-}  
+    &__price {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-right: $pad;
+    }
+    &__wrapper {
+        width: 400px;
+        height: 100px;
+        border-radius: 10px;
+        background: $white; 
+        transition: all 1s linear;
+        padding-left: 20px;
+    }
+    &__wrapper:hover {
+        border-radius: 10px 0 0 10px;
+        width: 300px;
+    }
+    p:first-child {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+    i {
+        overflow: hidden;
+        opacity: 0;
+        width: 0;
+        height: 0;
+        color: $white;
+        margin: 0;
+        padding: 0;
+        bottom: 0;      
+        place-content: center;
+        }
+    &__wrapper:hover i {
+        z-index: -1;
+        opacity: 1;
+        display: flex;
+        flex-wrap: wrap;
+        position: absolute;
+        border-radius: 0 $rad $rad 0;
+        width: 100px;
+        height: 100px;
+        left: 100%;
+        margin-left: -100px;
+        animation: 1s 0s ease 2 alternate roll;
+        -webkit-animation: 1s 0s ease 2 alternate roll;
+        }
+    }  
+
 
 @keyframes roll {
     0% { 
@@ -86,6 +92,8 @@ i {
         transform: rotate(360deg);
     }
 }
+
+//mouvement de droite à gauche
 
 /*@keyframes slideOut {
     0% {
@@ -105,3 +113,20 @@ i {
         z-index: 1;
     }
 }*/
+
+//apparition progressive
+
+@keyframes apparition {
+    0% {
+        opacity: 0;
+        transform: translateY(300px);
+    }
+    50%{
+        opacity: 0.5;
+        transform: translateY(150px);
+    }
+    50%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}

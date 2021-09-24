@@ -1,6 +1,8 @@
+//primary content accueil
+
 .primary-content {
     background-color: $lighter;
-    &__restaurants {@extend %inline;}
+    &__restaurants {@extend %center;}
     article {
             @extend %article;
         height: 300px;

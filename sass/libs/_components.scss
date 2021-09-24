@@ -1,3 +1,5 @@
+//boutons fonctionnement explore et commande
+
 .bouton {
     @extend %center;
 &__explore {
@@ -45,6 +47,8 @@ position: absolute;
 z-index: 3;
 &:hover {color: $primary;}
 }
+
+//cœurs
 
 .heart {
     &__checked {
