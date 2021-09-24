@@ -1,4 +1,5 @@
-.bouton__nav, .bouton, .introduction__present, .introduction__search-box, .welcome, .spinner, .loader {
+@charset "UTF-8";
+.container, .primary-content__restaurants, .bouton__nav, .bouton, .introduction__present, .introduction__search-box, .welcome, .spinner, .loader {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -7,7 +8,7 @@
   height: 100%;
 }
 
-main .title, .primary-content__restaurants, .pages {
+main .title, .pages {
   display: inline-flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -15,7 +16,7 @@ main .title, .primary-content__restaurants, .pages {
   align-items: center;
 }
 
-.container, .introduction, footer {
+.introduction, footer {
   display: flex;
   flex-wrap: nowrap;
   flex-direction: column;
@@ -24,7 +25,6 @@ main .title, .primary-content__restaurants, .pages {
 .content__setmenu, .primary-content article {
   margin: 20px;
   background-color: #fff;
-  border-radius: 30px;
   width: 400px;
   border-radius: 30px;
   box-shadow: 5px 5px 5px #8d8d8d;
@@ -37,7 +37,7 @@ body {
 @media (min-width: 768px) {
   body {
     display: grid;
-    column-gap: 10px;
+    gap: 20px;
     grid-template-areas: "header section section" "nav introduction introduction" ". primary-content primary-content" "footer footer footer";
     grid-auto-rows: 1fr auto auto 2fr;
     grid-template-columns: 2fr auto auto;
@@ -73,6 +73,7 @@ body {
     grid-column: 2;
     grid-row: 3;
     background-color: #fff;
+    margin-bottom: auto;
   }
   body .primary-content article {
     align-items: stretch;
@@ -101,7 +102,7 @@ body {
 @media (min-width: 1024px) {
   body {
     display: grid;
-    column-gap: 10px;
+    gap: 20px;
     grid-template-areas: "header section section" "nav introduction introduction" ". primary-content primary-content" "footer footer footer";
     grid-auto-rows: 1fr auto auto 2fr;
     grid-template-columns: 2fr auto auto;
@@ -137,6 +138,7 @@ body {
     grid-column: 2;
     grid-row: 3;
     background-color: #fff;
+    margin-bottom: auto;
   }
   body .primary-content article {
     align-items: stretch;
@@ -169,7 +171,7 @@ body {
 @media (min-width: 768px) {
   body {
     display: grid;
-    column-gap: 10px;
+    gap: 20px;
     grid-template-areas: "arrow . ." "restaurant restaurant restaurant" "menu menu menu" "footer footer footer";
     grid-auto-rows: 1fr auto auto 2fr;
     grid-template-columns: 2fr auto auto;
@@ -202,25 +204,31 @@ body {
   body .container {
     grid-area: "menu";
     grid-row: 3;
-    grid-column: auto;
-    columns: 3 350px;
-    height: 500px;
-    display: inline-block;
-    flex-direction: row;
+    grid-column: 1/3;
+    display: flex;
     flex-wrap: wrap;
     width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 5px;
   }
   body .container .content {
+    width: 33%;
+    min-width: 430px;
+  }
+  body .container .command {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    max-width: 1200px;
+    width: 33%;
+    min-width: 430px;
+    align-self: center;
+    justify-content: center;
   }
 }
 @media (min-width: 1024px) {
   body {
     display: grid;
-    column-gap: 10px;
+    gap: 20px;
     grid-template-areas: "arrow . ." "restaurant restaurant restaurant" "menu menu menu" "footer footer footer";
     grid-auto-rows: 1fr auto auto 2fr;
     grid-template-columns: 2fr auto auto;
@@ -253,22 +261,44 @@ body {
   body .container {
     grid-area: "menu";
     grid-row: 3;
-    grid-column: auto;
-    columns: 3 350px;
-    height: 500px;
-    display: inline-block;
-    flex-direction: row;
+    grid-column: 1/3;
+    display: flex;
     flex-wrap: wrap;
     width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 5px;
   }
   body .container .content {
+    width: 33%;
+    min-width: 430px;
+  }
+  body .container .command {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    max-width: 1200px;
+    width: 33%;
+    min-width: 430px;
+    align-self: center;
+    justify-content: center;
   }
 }
 
+/*.palette {
+    @include bgd-img($palette);
+}
+
+.délice {
+    @include bgd-img($délice);
+}
+
+.française {
+    @include bgd-img($française);
+}
+
+.note {
+    @include bgd-img(note);
+}
+*/
 .loader {
   position: absolute;
   background-color: #f3f3f3;
@@ -376,6 +406,11 @@ header {
   column-gap: 100px;
 }
 
+.welcome {
+  background-image: url(..imagesrestaurants/logo_ohmyfood.svg);
+  width: 100%;
+}
+
 footer {
   background: #272727;
   color: #fff;
@@ -385,7 +420,7 @@ footer a {
   color: #fff;
 }
 footer a:hover {
-  color: #9356DC;
+  color: #99E2D0;
 }
 footer h2 {
   font-family: "Shrikhand";
@@ -581,6 +616,7 @@ main .title {
   position: relative;
   flex-wrap: wrap;
   z-index: 0;
+  animation: apparition 2s ease-in-out;
 }
 .content__uppercase {
   text-transform: uppercase;
@@ -651,22 +687,36 @@ main .title {
     transform: rotate(360deg);
   }
 }
-@keyframes slideOut {
-  0% {
-    transform: translateX(100px);
-  }
-  100% {
-    transform: translateX(0);
-  }
+/*@keyframes slideOut {
+    0% {
+        transform: translateX(100px);
+    }
+    100% {
+        transform: translateX(0);
+    }
 }
 @-webkit-keyframes slideOut {
+    0% {
+        transform: translateX(100px);
+        z-index: -10;
+    }
+    100% {
+        transform: translateX(0);
+        z-index: 1;
+    }
+}*/
+@keyframes apparition {
   0% {
-    transform: translateX(100px);
-    z-index: -10;
+    opacity: 0;
+    transform: translateY(300px);
   }
-  100% {
-    transform: translateX(0);
-    z-index: 1;
+  50% {
+    opacity: 0.5;
+    transform: translateY(150px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0px);
   }
 }
 * {
