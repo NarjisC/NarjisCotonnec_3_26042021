@@ -21,3 +21,13 @@
   }
 }
 
+/*@mixin bgd-img($assetPath) {
+  background-image: url(#{$assetPath});
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@mixin logo {
+  background-image: url(#{$logo-img});
+  width: 100%;
+}*/
