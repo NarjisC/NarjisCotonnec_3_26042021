@@ -6,135 +6,190 @@
             <meta name="description" content="Menu du restaurant, Le Délice Des Sens. OhMyFood, entreprise de commande de repas en ligne, 
             nous proposons à nos clients les menus de restaurants gastronomiques."/>
             <meta name="author" content="Narjis Cotonnec"/>
-            <link rel="stylesheet" href=""> 
+            <link rel="stylesheet" href="style.css" type="text/css"> 
+            <link rel="preconnect" href="https://fonts.gstatic.com"> 
+            <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;900&display=swap" rel="stylesheet"> 
+            <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
             <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
             <script src="https://kit.fontawesome.com/bcad5a07b6.js" crossorigin="anonymous"></script>
-            <link rel="icon" type="image/png" sizes="16x16" href=".\Maquettes Ohmyfood\images\logo/ohmyfood@2x.svg">
-            <title>Ohmyfood</title>
+            <link rel="icon" type="image/svg" sizes="16x16" href="./images/restaurants/logo_ohmyfood.svg"/>
+                <title>Ohmyfood</title>
         </head>
 
         <body>
 
-            <header>
-                <div class="back">
-                    <a href="..\index.html"><i class="fa fa-arrow-left"></i></a>
-                </div>
-                    <img src="..\Maquettes Ohmyfood\images\logo\ohmyfood@2x.svg" id="logo" alt="logo Ohmyfood"/>
+            <header class="pages">
+                <a href="index.html">
+                    <i class="fa fa-arrow-left"></i>
+                </a>
+                <img src=".\images\restaurants\logo_ohmyfood.svg" alt="logo Ohmyfood">
             </header>
 
             <main>
-                <img src="..\Maquettes Ohmyfood\images\restaurants\jay-wennington-N_Y88TWmGwA-unsplash.jpg" 
-                alt="Assiette garnie sur table de restaurant, menu et verre à pied"/>
-                    <h1>Le Délice Des Sens</h1>
-                    <i class="fa fa-heart-o"></i>
+                <img src="./images\restaurants\restaurant_délice.jpg" 
+                alt="Assiette garnie sur table de restaurant, menu et verre à pied">
+                    <span class="title">
+                        <h1>Le Délice Des Sens</h1>
+                            <div class="heart">
+                                <span class="heart__checked">
+                                    <i class="fas fa-heart fa-2x"></i> 
+                                </span>
+                                <span class="heart__unchecked">
+                                    <i class="far fa-heart fa-2x"></i>
+                                </span>
+                            </div>
+                    </span>
             </main>
 
-            <div id="menu">
+        <div class="container">
+            <div class="content">
+                <h3 class="content__uppercase">
+                    <u>Entr</u>ées
+                </h3>
 
-                <div class="starter">
-                    <h4>Entrées</h4>
-
-                        <label for="starter1"> 
-                            <h4>Fricassée d'escargot</h4>
-                            <p>Au piment d'Espelette</p> 
-                            <p>25€</p>
-                        </label>
-                        <input type="checkbox" id="starter1" name="starter1" value="starter">
-
-                        <label for="starter2"> 
-                            <h4>Foie gras de canard mi-cuit</h4>
-                            <p>Et ses copeaux de truffe noire</p>
-                            <p>35€</p>
-                        </label>
-                        <input type="checkbox" id="starter2" name="starter2" value="starter">
-
-                        <label for="starter3">
-                            <h4>Oeuf au plat</h4>
-                            <p>Assaisonné à la truffe sur lit de caviar</p>
-                            <p>20€</p>
-                        </label>
-                        <input type="checkbox" id="starter3" name="starter3" value="starter">
-
+                <div class="content__setmenu">
+                    <div class="content__wrapper">
+                                <h4>Tartare de thon</h4>
+                                    <div class="content__price">
+                                        <p>Assaisonné au yuzu</p>
+                                        <p>25€</p>
+                                    </div>
+                                            <i class="fas fa-check-circle fa-2x"></i>
+                    </div>
                 </div>
+
+                <div class="content__setmenu">
+                    <div class="content__wrapper">
+                                <h4>Bouchée de homard croustillant </h4>
+                                    <div class="content__price">
+                                        <p>Et sa farandole de petits légumes</p>
+                                        <p>35€</p>
+                                    </div>
+                                            <i class="fas fa-check-circle fa-2x"></i>
+                    </div>
+                </div>
+
+                <div class="content__setmenu">
+                    <div class="content__wrapper">
+                                <h4>Velouté de cèpes</h4>
+                                    <div class="content__price">
+                                        <p>Aux truffes</p>
+                                        <p>20€</p>
+                                    </div>
+                                            <i class="fas fa-check-circle fa-2x"></i>
+                    </div>
+                </div>
+
+            </div>
                 
-                <div class="maincourse">
-                    <h4>Plats</h4>
+                <div class="content">
+                    <h3 class="content__uppercase">
+                        <u>Plat</u>s
+                    </h3>
 
-                        <label for="maincourse1">
-                            <h4>Filet de boeuf aux herbes</h4>
-                            <p>Accompagné de sa ribambelle de légumes</p> 
-                            <p>40€</p>
-                        </label>
-                        <input type="checkbox" id="maincourse1" name="maincourse1" value="maincourse">
+                    <div class="content__setmenu">
+                        <div class="content__wrapper">
+                                    <h4>Poulet rôti aux herbes de Provence</h4>
+                                        <div class="content__price">
+                                            <p>Et sa crème de truffe</p>
+                                            <p>40€</p>
+                                        </div>
+                                                <i class="fas fa-check-circle fa-2x"></i>
+                        </div>
+                    </div>
 
-                        <label for="maincourse2">
-                            <h4>Parmentier de queue de boeuf</h4>
-                            <p>À la truffe noire sur sa purée de panais</p>
-                            <p>35€</p>
-                        </label>
-                        <input type="checkbox" id="maincourse2" name="maincourse2" value="maincourse">
-
-                        <label for="maincourse3">
-                            <h4>Filet de turbot</h4>
-                            <p>Aux agrumes</p>
-                            <p>44€</p>
-                        </label>
-                        <input type="checkbox" id="maincourse3" name="maincourse3" value="maincourse">
+                    <div class="content__setmenu">
+                        <div class="content__wrapper">
+                                    <h4>Langouste rôtie</h4>
+                                        <div class="content__price">
+                                            <p>Et ses légumes de saison</p>
+                                            <p>35€</p>
+                                        </div>
+                                                <i class="fas fa-check-circle fa-2x"></i>
+                        </div>
+                    </div>
+                        
+                    <div class="content__setmenu">
+                        <div class="content__wrapper">
+                                    <h4>Côte de boeuf Angus </h4>
+                                        <div class="content__price">
+                                            <p>Et sa purée de panaïs</p>
+                                            <p>44€</p>
+                                        </div>
+                                                <i class="fas fa-check-circle fa-2x"></i>
+                        </div>
+                    </div>
 
                 </div>
 
-                <div class="dessert">
-                    <h4>Desserts</h4>
+                <div class="content">
+                    <h3 class="content__uppercase">
+                        <u>Dess</u>erts
+                    </h3>
 
-                        <label for="dessert1">
-                            <h4>Paris-Brest</h4>
-                            <p>Revisité</p> 
-                            <p>18€</p>
-                        </label>
-                        <input type="checkbox" id="dessert1" name="dessert1" value="dessert">
+                    <div class="content__setmenu">
+                        <div class="content__wrapper">
+                                    <h4>Farandole de desserts</h4>
+                                        <div class="content__price">
+                                            <p>Du chef</p>
+                                            <p>18€</p>
+                                        </div>
+                                                <i class="fas fa-check-circle fa-2x"></i>
+                        </div>
+                    </div>
 
-                        <label for="dessert2">
-                            <h4>Macaron au chocolat d'exception</h4>
-                            <p>Et glace à la vanille de Madagascar</p>
-                            <p>22€</p>
-                        </label>
-                        <input type="checkbox" id="dessert2" name="dessert2" value="dessert">
+                    <div class="content__setmenu">
+                        <div class="content__wrapper">
+                                    <h4>Crème brulée</h4>
+                                        <div class="content__price">
+                                            <p>Revisitée</p>
+                                            <p>22€</p>
+                                        </div>
+                                                <i class="fas fa-check-circle fa-2x"></i>
+                        </div>
+                    </div>
 
-                        <label for="dessert2">
-                            <h4>Mousse au chocolat</h4>
-                            <p>Au piment d'Espelette et à la truffe noire</p>
-                            <p>23€</p>
-                        </label>
-                        <input type="checkbox" id="dessert3" name="dessert3" value="dessert">
-
+                    <div class="content__setmenu">
+                        <div class="content__wrapper">
+                                    <h4>Tiramisu</h4>
+                                        <div class="content__price">
+                                            <p>À la noisette</p>
+                                            <p>23€</p>
+                                        </div>
+                                                <i class="fas fa-check-circle fa-2x"></i>
+                        </div>
+                    </div>
                 </div>       
-            
-        </div>
+        
 
-            <footer>
-
-                <h2>ohmyfood</h2>
-                <ul>
+        <span class="container__command">
+            <button class="bouton__explore">
+            Commander
+            </button>
+        </span>
+    </div>
+        
+        <footer>              
+            <h2>ohmyfood</h2>
+                <ul class="fa-ul">
                     <li>
-                        <i class="fa fa-cutlery" aria-hidden="true"></i>
-                        Proposer un restaurant
+                        <i class="fa-li fa fa-cutlery" aria-hidden="true"></i>
+                            Proposer un restaurant
                     </li>
                     <li>
-                        <i class="fas fa-hands-helping"></i>
-                        Devenir partenaire
+                        <i class="fa-li fas fa-hands-helping" aria-hidden="true"></i>
+                            Devenir partenaire
                     </li>
                     <li>
-                        <i class="fas fa-file-signature"></i>
-                        Mentions légales
-                    </li>
+                        <i class="fa-li fas fa-file-signature" aria-hidden="true"></i>
+                            Mentions légales
                     <li>
-                        <i class="fa fa-envelope"></i>
-                        <a href="mailto:hello@openclassrooms.com">Contact</a>
+                        <i class="fa-li fa fa-envelope" aria-hidden="true"></i>      
+                            <a href="mailto:hello@openclassrooms.com">Contact</a>
                     </li>
-                </ul>
-            </footer>
+                </div>
+        </footer>
 
         </body>
 
-    </html>
-
+</html>
