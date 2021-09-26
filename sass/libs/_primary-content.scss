@@ -1,0 +1,43 @@
+//primary content accueil
+
+.primary-content {
+    background-color: $lighter;
+    &__restaurants {@extend %center;}
+    article {
+            @extend %article;
+        height: 300px;
+        overflow: hidden;
+        border-radius: $rad;
+        position: relative;
+    }
+    img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        overflow: visible;
+        margin: auto;
+        border-radius: $rad $rad 0 0;
+        padding: 0;
+    }
+    &__new {
+        background-color: $third;
+        color: darken($third, 30%);
+        padding: 10px;
+        text-align: right;
+        position: absolute;
+        font-weight: $b;
+        top: 30px;
+        right: 30px;
+        border-radius: 3px;
+    }
+    &__info {
+        padding: $pad;
+        line-height: 10px;
+        margin-top: 0;
+    }
+    .heart {
+        position: relative;
+        float: right;
+        top: -55px;
+    }
+}

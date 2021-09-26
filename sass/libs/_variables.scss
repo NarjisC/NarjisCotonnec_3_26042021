@@ -1,0 +1,36 @@
+//colors
+$primary: #9356DC;
+$secondary: #ff79da;
+$third: #99E2D0;
+
+$grey: #c0c0c0;
+$lighter: lighten($grey,20%);
+$dark: darken($grey,20%);
+$darker: darken($grey,60%);
+$white: #fff;
+$black: #000;
+
+//fonts
+$title: 'Shrikhand';
+$default: 'Roboto' !default;
+$b: bolder;
+
+//numbers
+$txsize: 16px;
+$txtitle: 42px;
+$rad: 30px;
+$pad: 20px;
+$op : 0.7;
+
+//images 
+$shadow: 5px 5px 5px $dark;
+$bigshadow: 10px 10px 5px $darker;
+$assetPath:"..\images\restaurants/";
+$logo-img: '#{$assetPath}logo_ohmyfood.svg';
+$palette: '#{$assetPath}restaurant_palette.jpg';
+$note: '#{$assetPath}restaurant_note.jpg';
+$française: '#{$assetPath}restaurant_française.jpg';
+$délice: '#{$assetPath}restaurant_délice.jpg';
+
+//responsive
+$breakpoints: (phone: 480px, tablet: 768px, desktop: 1024px);

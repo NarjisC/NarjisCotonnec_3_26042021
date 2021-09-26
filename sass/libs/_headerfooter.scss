@@ -1,0 +1,29 @@
+//header
+header { 
+    padding: $pad;
+}
+.pages {
+    @extend %inline;
+    column-gap: 100px;
+}
+.welcome {
+    @extend %center;
+}
+
+//footer
+footer {
+    background: $darker;
+    color: $white;
+    padding: $pad;
+    @extend %column;
+        a {
+            color: $white;
+        }
+        a:hover {
+            color: $primary;
+        }
+        h2 { 
+        font-family: $title;
+        padding-left: $pad;
+        }
+}

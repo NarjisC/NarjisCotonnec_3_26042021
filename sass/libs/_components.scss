@@ -1,0 +1,72 @@
+//boutons fonctionnement explore et commande
+
+.bouton {
+            @extend %center;
+    &__explore {
+            @include bouton; 
+        border: none;
+        box-shadow: $shadow;
+        border: hidden;
+        background: linear-gradient($secondary, $primary);
+        color: $white;
+        margin: $pad;
+            &:hover {
+                opacity: $op;
+                box-shadow: $bigshadow;
+            }
+    }
+    &__nav {
+            @extend %center;
+            @include bouton;
+        color: $black;
+        background-color: $lighter;
+        width: 400px;
+        height: 60px;
+        z-index: 0;
+            &:hover{opacity: $op;}
+    }
+    &__round {
+        clip-path: circle(40% at 50% 50%);
+        padding: 8px;
+        background: $primary;
+        color: $white;
+        font-weight: $b;
+        border: none;
+        position: relative;
+        bottom: -40px;
+        left: -8px;
+        z-index: 2;
+    }
+}
+
+.nav li i  {
+    color: $dark;
+    padding-left: 95px;
+    padding-right: $pad;
+    padding-top: $pad;
+    position: absolute;
+    z-index: 3;
+    &:hover {color: $primary;}
+}
+
+//cœurs
+
+.heart {
+    &__checked {
+        position: absolute;
+        opacity: 0;
+        color: $primary;
+    }
+    &__checked:hover {
+        opacity: 1;
+        z-index: 10;
+        transition: all 2s ease-in-out;
+    }
+    &__unchecked {
+        position: relative;
+    }
+    &__unchecked:hover {
+        opacity: 0;
+        z-index: -10;
+    }
+}

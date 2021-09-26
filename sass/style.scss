@@ -1,0 +1,54 @@
+@import './libs/variables';
+@import './libs/placeholders';
+@import './libs/mixins';
+@import './libs/mediaqueries';
+
+@import './libs/animations';
+@import './libs/headerfooter';
+@import './libs/accueil';
+@import './libs/components';
+@import './libs/primary-content';
+@import './libs/titlemenu';
+@import './libs/setmenu';
+
+
+
+
+//main
+* {
+    box-sizing: border-box;
+}
+body { 
+    background: $white;
+    width: 100%;
+    height: 100%;
+    margin: 4px;
+    font-family: $default;
+    color: $black;
+    font-size: $txsize;
+}
+h1 {
+    text-align: center;
+}
+h3 {
+    padding-left: $pad; 
+    padding-top: $pad;
+}
+h4 {
+    line-height: 0;
+}
+
+a {
+ text-decoration:none; 
+ color: $black;
+}
+
+ul li {
+    margin: 0;
+    padding: 5px;
+    font-weight: $b;
+}
+u {
+    text-decoration: $third 2px solid underline;
+    text-underline-offset: 8px;
+}
