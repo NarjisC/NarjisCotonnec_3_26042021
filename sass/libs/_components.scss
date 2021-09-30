@@ -16,26 +16,29 @@
             }
     }
     &__nav {
-            @extend %center;
+            @extend %column;
             @include bouton;
         color: $black;
         background-color: $lighter;
-        width: 400px;
+        width: 350px;
         height: 60px;
+        margin: 10px 0;
         z-index: 0;
             &:hover{opacity: $op;}
     }
     &__round {
-        clip-path: circle(40% at 50% 50%);
-        padding: 8px;
+        border-radius: 50%;
+        width: 25px;
+        height: 25px;
         background: $primary;
         color: $white;
         font-weight: $b;
         border: none;
         position: relative;
-        bottom: -40px;
-        left: -8px;
+        left: -30px;
         z-index: 2;
+        text-align: center;
+        line-height: 25px;
     }
 }
 
@@ -46,7 +49,8 @@
     padding-top: $pad;
     position: absolute;
     z-index: 3;
-    &:hover {color: $primary;}
+        &:hover {color: $primary;}
+
 }
 
 //cœurs

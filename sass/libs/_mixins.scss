@@ -13,7 +13,7 @@
   border-radius: $rad;
 }
 
-@mixin media($keys...){
+@mixin media($keys...) {
   @each $key in $keys { 
     @media (min-width: map-get($breakpoints, $key)){
       @content

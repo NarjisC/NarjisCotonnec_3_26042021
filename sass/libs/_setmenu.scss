@@ -1,20 +1,27 @@
+//pages menus setmenu et animations
+
 .container {
-            @extend %column;
-        flex-wrap: wrap;
-        justify-content: center;
+    @extend %center;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: $lighter;
 }
-.content {background-color: $lighter;
+
+.content {
+    background-color: $lighter;
     &__setmenu { 
             @extend %article;
+        border-radius: 10px;
         height: 100px;
         background: $third;  
         cursor: grab;
         display: flex;
+        position: relative;
         flex-wrap: wrap;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        overflow: hidden;
+        z-index: 0;
+        animation: apparition 2s ease-in-out;
     }
+
     &__uppercase {
         text-transform: uppercase;
         font-weight: lighter;
@@ -28,13 +35,19 @@
     &__wrapper {
         width: 400px;
         height: 100px;
-        border-radius: $rad;
+        border-radius: 10px;
         background: $white; 
         transition: all 1s linear;
+        padding-left: 20px;
     }
     &__wrapper:hover {
-        border-radius: $rad 0 0 $rad;
+        border-radius: 10px 0 0 10px;
         width: 300px;
+    }
+    p:first-child {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
     }
     i {
         overflow: hidden;
@@ -48,6 +61,7 @@
         place-content: center;
         }
     &__wrapper:hover i {
+        z-index: -1;
         opacity: 1;
         display: flex;
         flex-wrap: wrap;
@@ -62,12 +76,10 @@
         }
     }  
 
+
 @keyframes roll {
     0% { 
         transform: rotate(0deg);
-    }
-    50% {
-        transform: rotate(180deg);
     }
     100% { 
         transform: rotate(360deg);
@@ -77,10 +89,22 @@
     0% { 
         transform: rotate(0deg);
     }
-    50% {
-        transform: rotate(180deg);
-    }
     100% {   
         transform: rotate(360deg);
+    }
+}
+
+@keyframes apparition {
+    0% {
+        opacity: 0;
+        transform: translateY(300px);
+    }
+    50%{
+        opacity: 0.5;
+        transform: translateY(150px);
+    }
+    50%{
+        opacity: 1;
+        transform: translateY(0px);
     }
 }
