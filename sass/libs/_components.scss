@@ -43,6 +43,7 @@
 }
 
 .nav li i  {
+        @extend %inline;
     color: $dark;
     padding-left: 95px;
     padding-right: $pad;

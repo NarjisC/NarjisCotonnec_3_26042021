@@ -14,7 +14,7 @@
   height: 100%;
 }
 
-.pages, main .title {
+.pages, .nav li i, main .title {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
