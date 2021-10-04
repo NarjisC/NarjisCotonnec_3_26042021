@@ -311,7 +311,7 @@ footer, .introduction, .bouton__nav {
     display: grid;
     gap: 10px;
     max-width: 1600px;
-        grid-template-areas: '7 . .' '8 8 8' '9 9 9' '6 6 6';
+        grid-template-areas: '7 . .' '8 8 8' '9 9 9';
     grid-auto-rows: 1fr auto auto 2fr;
     -ms-grid-columns: 2fr auto auto;
         grid-template-columns: 2fr auto auto;
@@ -407,7 +407,7 @@ footer, .introduction, .bouton__nav {
     display: grid;
     gap: 10px;
     max-width: 1600px;
-        grid-template-areas: '7 . .' '8 8 8' '9 9 9' '6 6 6';
+        grid-template-areas: '7 . .' '8 8 8' '9 9 9';
     grid-auto-rows: 1fr auto auto 2fr;
     -ms-grid-columns: 2fr auto auto;
         grid-template-columns: 2fr auto auto;
@@ -686,7 +686,7 @@ footer a {
 }
 
 footer a:hover {
-  color: #9356DC;
+  color: #99E2D0;
 }
 
 footer h2 {
@@ -1053,8 +1053,9 @@ body {
   font-family: "Roboto";
   color: #000;
   font-size: 16px;
-  width: 90%;
-  margin: 5%;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 h1 {

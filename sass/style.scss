@@ -18,13 +18,15 @@
 * {
     box-sizing: border-box;
 }
+
 body { 
     background: $white;
     font-family: $default;
     color: $black;
     font-size: $txsize;
-    width: 90%;
-    margin: 5%;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 h1 {
