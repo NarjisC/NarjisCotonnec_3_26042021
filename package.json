@@ -1,0 +1,19 @@
+{
+  "name": "narjiscotonnec_3_26042021",
+  "version": "1.0.0",
+  "description": "Dynamisez une page web avec des animations CSS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NarjisC/NarjisCotonnec_3_26042021.git"
+  },
+  "author": "Narjis Cotonnec",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NarjisC/NarjisCotonnec_3_26042021/issues"
+  },
+  "homepage": "https://github.com/NarjisC/NarjisCotonnec_3_26042021#readme"
+}
