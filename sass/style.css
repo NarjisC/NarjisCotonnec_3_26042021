@@ -760,6 +760,7 @@ footer h2 {
   height: 60px;
   margin: 10px 0;
   z-index: 0;
+  position: relative;
 }
 
 .bouton__nav:hover {
@@ -785,10 +786,9 @@ footer h2 {
   color: #8d8d8d;
   padding-left: 95px;
   padding-right: 20px;
-  /*padding-top: $pad;*/
+  padding-top: 20px;
   position: absolute;
   z-index: 3;
-  line-height: 30px;
 }
 
 .nav li i:hover {

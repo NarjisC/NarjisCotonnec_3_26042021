@@ -24,6 +24,7 @@
         height: 60px;
         margin: 10px 0;
         z-index: 0;
+        position: relative;
             &:hover{opacity: $op;}
     }
     &__round {
@@ -46,10 +47,9 @@
     color: $dark;
     padding-left: 95px;
     padding-right: $pad;
-    /*padding-top: $pad;*/
+    padding-top: $pad;
     position: absolute;
     z-index: 3;
-    line-height: 30px;
         &:hover {color: $primary;}
 
 }
