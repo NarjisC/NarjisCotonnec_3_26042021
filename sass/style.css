@@ -782,7 +782,7 @@ footer h2 {
   line-height: 25px;
 }
 
-.nav li i {
+.nav i {
   color: #8d8d8d;
   padding-left: 95px;
   padding-right: 20px;
@@ -791,7 +791,7 @@ footer h2 {
   z-index: 3;
 }
 
-.nav li i:hover {
+.nav i:hover {
   color: #9356DC;
 }
 
