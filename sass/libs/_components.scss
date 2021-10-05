@@ -46,9 +46,10 @@
     color: $dark;
     padding-left: 95px;
     padding-right: $pad;
-    padding-top: $pad;
+    /*padding-top: $pad;*/
     position: absolute;
     z-index: 3;
+    line-height: 30px;
         &:hover {color: $primary;}
 
 }

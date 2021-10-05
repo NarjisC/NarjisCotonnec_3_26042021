@@ -785,9 +785,10 @@ footer h2 {
   color: #8d8d8d;
   padding-left: 95px;
   padding-right: 20px;
-  padding-top: 20px;
+  /*padding-top: $pad;*/
   position: absolute;
   z-index: 3;
+  line-height: 30px;
 }
 
 .nav li i:hover {
