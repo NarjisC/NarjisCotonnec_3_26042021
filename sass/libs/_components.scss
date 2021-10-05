@@ -16,18 +16,25 @@
             }
     }
     &__nav {
-            @extend %column;
-            @include bouton;
         color: $black;
         background-color: $lighter;
+        border-radius: $rad;
         width: 350px;
         height: 60px;
         margin: 10px 0;
-        z-index: 0;
+        display: flex;
+        align-items: center;
         position: relative;
             &:hover{opacity: $op;}
+            i {
+                margin-left: 35px;
+                margin-right: 35px;
+                font-size: 16px;
+                &:hover {color: $primary;}
+            }
     }
     &__round {
+            @extend %center;
         border-radius: 50%;
         width: 25px;
         height: 25px;
@@ -35,25 +42,10 @@
         color: $white;
         font-weight: $b;
         border: none;
-        position: relative;
-        left: -30px;
-        z-index: 2;
-        text-align: center;
-        line-height: 25px;
+        position: absolute;
+        left: -10px;
     }
 }
-
-nav i {
-    color: $dark;
-    padding-left: 95px;
-    padding-right: $pad;
-    padding-top: $pad;
-    position: absolute;
-    z-index: 3;
-        &:hover {color: $primary;}
-
-}
-
 
 //cœurs
 
