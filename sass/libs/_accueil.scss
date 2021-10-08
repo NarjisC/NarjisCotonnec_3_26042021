@@ -3,14 +3,13 @@
 .introduction {
     @extend %column;
     &__search-box {
-        @extend %center;
+            @extend %center;
         background-color: $grey;
         color: $darker;
         box-shadow: inset  0px 10px 10px -10px $darker;
-        justify-content: space-envenly;
+        justify-content: space-evenly;
         column-gap: $pad;
         font-weight: $b;
-        @extend %center;
         width: auto;
         height: 50px;
     }
@@ -24,7 +23,8 @@
         border: none;
     }
     &__present {
+            @extend %center;
         background-color: $lighter;
-        @extend %center;
+            
     }
 }
