@@ -1,13 +1,12 @@
 //accueil, introduction, présentation entreprise
 
 .introduction {
-    @extend %column;
+            @extend %column;
     &__search-box {
             @extend %center;
         background-color: $grey;
         color: $darker;
         box-shadow: inset  0px 10px 10px -10px $darker;
-        justify-content: space-evenly;
         column-gap: $pad;
         font-weight: $b;
         width: auto;
@@ -23,8 +22,7 @@
         border: none;
     }
     &__present {
-            @extend %center;
-        background-color: $lighter;
-            
+        text-align: center;
+        background-color: $lighter;      
     }
 }

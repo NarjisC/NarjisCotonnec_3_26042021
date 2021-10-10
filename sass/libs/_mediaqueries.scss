@@ -5,52 +5,52 @@ body {
         display: grid;
         gap: 10px;
         max-width: 1600px;
-        grid-template-areas: '1 2 2'
-                    '3 4 4'
-                    '. 5 5'
+        grid-template-areas: '1 . 2'
+                    '4 4 3'
+                    '5 5 5'
                     '6 6 6';
                     grid-auto-rows: 1fr auto auto 2fr;
-                    grid-template-columns: 2fr auto auto; 
+                    grid-template-columns: auto auto auto; 
         header { 
             margin-left: $pad;
             width: 196px;
             height: 34px;
             grid-area: 1;
-            grid-column: 1;
+            grid-column: 1/2;
             grid-row: 1;
         }
         .introduction {
             grid-area: 2;
-            grid-column: 2;
+            grid-column: 3/4;
             grid-row: 1;
             &__present {
                 grid-area: 4;
-                grid-column: 2;
+                grid-column: 1/3;
                 grid-row: 2;
                 display: flex;
                 flex-direction: column;
-                flex-wrap: nowrap;
+                justify-content: center;
+                align-items: center;
             }
         }
         nav {
             grid-area: 3;
-            grid-column: 1;
+            grid-column: 3/4;
             grid-row: 2;
+            display: flex;
+            flex-direction: column;
+
         }
         .primary-content {
             grid-area: 5;
-            grid-column: 2;
+            grid-column: 1/4;
             grid-row: 3; 
             background-color: $white;
             margin-bottom: auto;
-                article {
-                    align-items: stretch;
-                    width: 100%; 
-                }
         }
         footer {
             grid-area: 6;
-            grid-column: 1/3;
+            grid-column: 1/4;
             grid-row: 4;
             align-items: start;
             width: 100%;
@@ -81,7 +81,7 @@ body {
                         '8 8 8'
                         '9 9 9';
                         grid-auto-rows: 1fr auto auto 2fr;
-                        grid-template-columns: 2fr auto auto;  
+                        grid-template-columns: auto auto auto;  
         .pages {
             grid-area: 7;
             display: inline-flex;
